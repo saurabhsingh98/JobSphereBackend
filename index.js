@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-dotenv.config();
+dotenv.config(); 
 
 import cookieParser from 'cookie-parser';
 import express from 'express'
@@ -8,7 +8,7 @@ import dbconnect from './utils/db.js'
 
 
 const app= express();
-
+// console.log(process.env.CLOUD_NAME)
 
 //middlewares
 app.use(express.json());
