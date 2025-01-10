@@ -8,7 +8,7 @@ import cloudinary from "../utils/cloudinary.js";
 export const register = async (req, res) => {
     try {
         const { fullname, email, phoneNumber, password, role } = req.body;
-
+        console.log("doing register")
         // Validate required fields
         if (!fullname || !email || !phoneNumber || !password || !role) {
             return res.status(400).json({
@@ -69,7 +69,7 @@ export const register = async (req, res) => {
 export const login = async (req, res) => {
     try {
         const { email, password, role } = req.body;
-
+        console.log("doing login")
         // Validate required fields
         if (!email || !password || !role) {
             return res.status(400).json({
