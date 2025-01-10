@@ -7,7 +7,7 @@ import { getAllJobs, getJobById, getJobCreatedByAdmin, postJob } from '../contro
 const router= express.Router();
 
 router.route("/post").post(isAuthenticated, postJob);
-router.route("/get").get(isAuthenticated, getAllJobs);
+router.route("/get").get(getAllJobs);
 router.route("/getadmincreatedjobs").get(isAuthenticated, getJobCreatedByAdmin);
 router.route("/get/:id").get(isAuthenticated, getJobById);
 
